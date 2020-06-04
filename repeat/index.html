@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="xapp">
+	<head>
+		<title>Latihan ng-repeat</title>
+		<script type="text/javascript" src="../js/angular.js"></script>
+		<script type="text/javascript" src="app.js"></script>
+	</head>
+	<body ng-controller="xctrl">
+		<h1>Tabel Murid</h1>
+		<p>
+			<input type="search" placeholder="Masukkan kata kunci" ng-model="q">
+		</p>
+		<p>
+			<table border="1">
+				<tr>
+					<th>Nama</th>
+					<th>Kelas</th>
+					<th>Nilai</th>
+				</tr>
+				<tr ng-repeat="s in (result = (students | filter:q))">
+					<td>{{s.name}}</td>
+					<td>{{s.class}}</td>
+					<td>{{s.score}}</td>
+				</tr>
+				<tr ng-if="results.length == 0">
+					<td colspan="3">Hasil tidak ditemukan></td>
+				</tr>
+			</table>
+		</p>
+	</body>
+</html>

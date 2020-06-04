@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="xapp">
+	<head>
+		<title>Latihan Calculator</title>
+		<script type="text/javascript" src="../js/angular.js"></script>
+		<script type="text/javascript" src="app.js"></script>
+	</head>
+	<body ng-controller="xctrl">
+		<h1>Latihan Calculator</h1>
+		<div>
+			<span>{{x}}</span> <!-- proses binding -->
+			<br>
+			<input type="text" placeholder="Ketik apa saja " ng-model="x">
+			<hr>
+			<h2>{{operation}}</h2>
+			<input type="text" placeholder="Bilangan 1" ng-model="obj1">
+			<input type="text" placeholder="Bilangan 2" ng-model="obj2">
+			<span> = {{result}}</span>
+			<br><br>
+			<button ng-click="operate(1)">+ Add</button>
+			<button ng-click="operate(2)">- Subtraction</button>
+			<button ng-click="operate(3)">x Multiply</button>
+			<button ng-click="operate(4)">/ Divide</button>
+		</div>
+	</body>
+</html>
